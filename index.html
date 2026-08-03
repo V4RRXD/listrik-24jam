@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚡ ABRAHAM POWER - Listrik 24 Jam</title>
+    <title>⚡ ABRAHAM POWER - Suara Jadi Listrik ⚡</title>
     <style>
         * {
             margin: 0;
@@ -32,22 +32,21 @@
             border: 1px solid rgba(0, 200, 255, 0.2);
             box-shadow: 0 0 60px rgba(0, 150, 255, 0.15);
             padding: 3rem 2rem;
-            transition: 0.2s;
         }
 
         /* HEADER */
         .header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .main-title {
-            font-size: clamp(3.5rem, 15vw, 7rem);
+            font-size: clamp(3rem, 14vw, 6.5rem);
             font-weight: 900;
             letter-spacing: 0.06em;
             color: #fff;
             text-shadow: 0 0 30px #00aaff, 0 0 60px #0055ff;
-            line-height: 1;
+            line-height: 1.1;
         }
 
         .main-title span {
@@ -56,7 +55,7 @@
         }
 
         .sub-tag {
-            font-size: clamp(1.2rem, 3vw, 2.2rem);
+            font-size: clamp(1rem, 2.5vw, 1.8rem);
             font-weight: 300;
             color: #aadcff;
             background: rgba(0, 60, 120, 0.3);
@@ -65,7 +64,7 @@
             border-radius: 50px;
             border: 1px solid rgba(0, 200, 255, 0.2);
             margin-top: 0.5rem;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
         }
 
         .sub-tag strong {
@@ -73,37 +72,113 @@
             font-weight: 700;
         }
 
-        /* TESTIMONI SECTION */
+        /* BAGIAN CARA KERJA */
+        .how-it-works {
+            background: rgba(0, 30, 70, 0.4);
+            border-radius: 30px 10px 30px 10px;
+            padding: 2rem 1.8rem;
+            margin: 2rem 0;
+            border-left: 6px solid #00ccff;
+            box-shadow: 0 0 40px rgba(0, 150, 255, 0.05);
+        }
+
+        .how-it-works h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            color: #88ddff;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .how-it-works h2 span {
+            font-size: 2rem;
+        }
+
+        .how-it-works p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #cceeff;
+            margin-bottom: 0.8rem;
+        }
+
+        .how-it-works .highlight {
+            color: #00ffff;
+            font-weight: 600;
+            text-shadow: 0 0 20px #00aaff;
+        }
+
+        .step-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .step-item {
+            background: rgba(0, 20, 50, 0.5);
+            padding: 1rem 1.2rem;
+            border-radius: 16px 4px 16px 4px;
+            border: 1px solid rgba(0, 200, 255, 0.1);
+            text-align: center;
+        }
+
+        .step-item .number {
+            display: inline-block;
+            background: #00ccff;
+            color: #0a0e1a;
+            font-weight: 700;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 50%;
+            margin-bottom: 0.4rem;
+            box-shadow: 0 0 20px #00ccff;
+        }
+
+        .step-item strong {
+            color: #fff;
+            display: block;
+            margin: 0.3rem 0;
+        }
+
+        .step-item small {
+            color: #88bbdd;
+            font-size: 0.85rem;
+        }
+
+        /* TESTIMONI */
         .testimoni-section {
-            margin: 3rem 0;
+            margin: 2.5rem 0;
         }
 
         .testimoni-section h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 400;
             letter-spacing: 0.2em;
             text-transform: uppercase;
             color: #88ccff;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
             border-bottom: 1px solid rgba(0, 200, 255, 0.1);
             padding-bottom: 1rem;
         }
 
         .testimoni-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.8rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
         }
 
         .testimoni-card {
             background: rgba(0, 30, 60, 0.5);
             border-radius: 24px 8px 24px 8px;
-            padding: 1.8rem 1.5rem;
+            padding: 1.5rem 1.2rem;
             border-left: 4px solid #00ccff;
             box-shadow: 0 0 30px rgba(0, 150, 255, 0.05);
             transition: 0.2s;
-            backdrop-filter: blur(4px);
         }
 
         .testimoni-card:hover {
@@ -113,16 +188,15 @@
         }
 
         .testimoni-card .quote {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
             color: #d0ecff;
             font-style: italic;
-            margin-bottom: 1rem;
         }
 
         .testimoni-card .quote::before {
             content: "\201C";
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #00ccff;
             opacity: 0.5;
             margin-right: 4px;
@@ -130,7 +204,7 @@
 
         .testimoni-card .quote::after {
             content: "\201D";
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #00ccff;
             opacity: 0.5;
             margin-left: 4px;
@@ -140,52 +214,44 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-top: 0.5rem;
+            margin-top: 1rem;
         }
 
         .testimoni-card .avatar {
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: linear-gradient(135deg, #0044aa, #00ccff);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #fff;
-            box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
             flex-shrink: 0;
-        }
-
-        .testimoni-card .author-info {
-            display: flex;
-            flex-direction: column;
         }
 
         .testimoni-card .author-name {
             font-weight: 600;
             color: #fff;
-            letter-spacing: 0.05em;
         }
 
         .testimoni-card .author-title {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #88bbdd;
-            letter-spacing: 0.1em;
         }
 
         .testimoni-card .stars {
             color: #ffcc00;
-            letter-spacing: 0.15em;
-            font-size: 1rem;
-            margin-top: 0.3rem;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
         }
 
         /* POWER INFO */
         .power-info {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             padding: 1.5rem;
             background: rgba(0, 40, 80, 0.3);
             border-radius: 30px 10px 30px 10px;
@@ -193,18 +259,18 @@
         }
 
         .power-info .label {
-            font-size: 1rem;
+            font-size: 0.9rem;
             letter-spacing: 0.2em;
             color: #88bbdd;
             text-transform: uppercase;
         }
 
         .power-info .value {
-            font-size: clamp(1.8rem, 5vw, 3.5rem);
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
             font-weight: 700;
             color: #00ffff;
             text-shadow: 0 0 40px #0066ff;
-            margin: 0.5rem 0;
+            margin: 0.3rem 0;
         }
 
         .power-info .value small {
@@ -215,20 +281,29 @@
 
         /* FOOTER */
         .footer {
-            margin-top: 2.5rem;
+            margin-top: 2rem;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #446688;
             letter-spacing: 0.15em;
             border-top: 1px solid rgba(0, 200, 255, 0.05);
-            padding-top: 1.5rem;
+            padding-top: 1.2rem;
         }
 
-        /* RESPONSIF */
         @media (max-width: 640px) {
-            .container { padding: 1.5rem 1rem; border-radius: 20px 10px; }
-            .testimoni-grid { grid-template-columns: 1fr; }
-            .testimoni-card { padding: 1.2rem; }
+            .container {
+                padding: 1.5rem 1rem;
+                border-radius: 20px 10px;
+            }
+            .how-it-works {
+                padding: 1.2rem;
+            }
+            .step-list {
+                grid-template-columns: 1fr;
+            }
+            .testimoni-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -242,8 +317,47 @@
             ⚡<span>ABRAHAM</span>⚡
         </div>
         <div class="sub-tag">
-            ⚡ LISTRIK 24 JAM ⚡ <br style="display: none;">
-            <span style="font-size: 0.7em;">ditenagai oleh <strong>ABRAHAM</strong></span>
+            ⚡ LISTRIK 24 JAM ⚡<br style="display: none;">
+            <span style="font-size: 0.7em;">dari <strong>YAPPING</strong> yang diubah jadi energi</span>
+        </div>
+    </div>
+
+    <!-- BAGIAN CARA KERJA -->
+    <div class="how-it-works">
+        <h2><span>🔊</span> Bagaimana Suara Jadi Listrik?</h2>
+        <p>
+            <span class="highlight">ABRAHAM</span> tidak hanya berbicara — setiap kata, setiap 
+            <span class="highlight">"yapping"</span>-nya adalah gelombang energi murni. 
+            Dengan teknologi <span class="highlight">konversi akustik-kinetik</span>, suara ABRAHAM 
+            ditangkap oleh <span class="highlight">resonator kuantum</span> yang mengubah getaran suara 
+            menjadi arus listrik stabil.
+        </p>
+        <p>
+            Hasilnya? <span class="highlight">Listrik 24 jam nonstop</span>, tanpa batas, tanpa interupsi. 
+            Selama ABRAHAM terus <span class="highlight">"yapping"</span>, energi mengalir deras ke seluruh penjuru.
+        </p>
+
+        <div class="step-list">
+            <div class="step-item">
+                <div class="number">1</div>
+                <strong>🎤 Yapping</strong>
+                <small>ABRAHAM berbicara / bersuara</small>
+            </div>
+            <div class="step-item">
+                <div class="number">2</div>
+                <strong>🔊 Gelombang Suara</strong>
+                <small>Getaran frekuensi tinggi ditangkap</small>
+            </div>
+            <div class="step-item">
+                <div class="number">3</div>
+                <strong>⚡ Konversi Energi</strong>
+                <small>Suara → Listrik via resonator</small>
+            </div>
+            <div class="step-item">
+                <div class="number">4</div>
+                <strong>💡 Listrik 24 Jam</strong>
+                <small>Energi stabil untuk semua</small>
+            </div>
         </div>
     </div>
 
@@ -253,7 +367,7 @@
         <div class="testimoni-grid">
 
             <div class="testimoni-card">
-                <div class="quote">Listrik nggak pernah mati semenjak pake ABRAHAM. Mantap!</div>
+                <div class="quote">Suara ABRAHAM beneran nge-charge rumah gue 24 jam!</div>
                 <div class="author">
                     <div class="avatar">R</div>
                     <div class="author-info">
@@ -265,7 +379,7 @@
             </div>
 
             <div class="testimoni-card">
-                <div class="quote">Benar-benar 24 jam nonstop. Bisnis gue jadi lancar banget.</div>
+                <div class="quote">Awalnya kagak percaya, tapi sekarang listrik gue stabil abis.</div>
                 <div class="author">
                     <div class="avatar">S</div>
                     <div class="author-info">
@@ -277,24 +391,12 @@
             </div>
 
             <div class="testimoni-card">
-                <div class="quote">ABRAHAM power keren! Nggak ada lagi drama listrik padam.</div>
+                <div class="quote">Yapping ABRAHAM = listrik gratis. Ini masa depan!</div>
                 <div class="author">
                     <div class="avatar">A</div>
                     <div class="author-info">
                         <span class="author-name">Andi Wijaya</span>
                         <span class="author-title">IT Consultant, Surabaya</span>
-                    </div>
-                </div>
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-
-            <div class="testimoni-card">
-                <div class="quote">Udah 3 bulan, listrik stabil. Rekomendasi banget!</div>
-                <div class="author">
-                    <div class="avatar">D</div>
-                    <div class="author-info">
-                        <span class="author-name">Dewi Lestari</span>
-                        <span class="author-title">Ibu Rumah Tangga, Medan</span>
                     </div>
                 </div>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -309,14 +411,17 @@
         <div class="value">
             24 <small>JAM</small> • 7 <small>HARI</small> • 365 <small>HARI</small>
         </div>
-        <div style="font-size: 0.95rem; color: #88bbdd; letter-spacing: 0.1em;">
-            Ditenagai oleh <strong style="color:#00ffff;">ABRAHAM</strong> — Tanpa Interupsi
+        <div style="font-size: 0.95rem; color: #88bbdd; letter-spacing: 0.05em;">
+            Ditenagai oleh <strong style="color:#00ffff;">YAPPING ABRAHAM</strong> — Tanpa Henti
+        </div>
+        <div style="font-size: 0.8rem; color: #6688aa; margin-top: 0.4rem; letter-spacing: 0.1em;">
+            🔊 Suara → ⚡ Listrik
         </div>
     </div>
 
     <!-- FOOTER -->
     <div class="footer">
-        ⚡ ABRAHAM POWER • Infinity Energy • 24/7/365 ⚡
+        ⚡ ABRAHAM POWER • Energi dari Suara • 24/7/365 ⚡
     </div>
 
 </div>
